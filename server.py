@@ -14,5 +14,9 @@ def message(msg):
   send(msg, broadcast=True) # send to everyone
   return None
 
+@app.route('/')
+def index():
+  messages = ['msg 1', 'msg 2', 'msg 3']
+  return render_template('index.html')
 if __name__ == '__main__':
   socketio.run(app)
