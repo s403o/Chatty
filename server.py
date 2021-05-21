@@ -31,4 +31,4 @@ def index():
   messages = ChatHistory.query.all()
   return render_template('index.html', messages=messages)
 if __name__ == '__main__':
-  socketio.run(app, debug=True)
+  socketio.run(app, debug=False)
